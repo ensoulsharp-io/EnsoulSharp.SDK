@@ -1,0 +1,510 @@
+{
+  "Aatrox": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "aatroxe",
+      "Invert": false
+    }
+  ],
+  "Ahri": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "ahritumble",
+      "Invert": false
+    }
+  ],
+  "Akali": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "akalie",
+      "Invert": true
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "akalir",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "akalirb",
+      "Invert": false
+    }
+  ],
+  "Alistar": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "W",
+      "SpellName": "headbutt",
+      "Invert": false
+    }
+  ],
+  "Caitlyn": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "caitlynentrapment",
+      "Invert": true
+    }
+  ],
+  "Camille": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "camilleedash2",
+      "Invert": false
+    }
+  ],
+  "Corki": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "W",
+      "SpellName": "carpetbomb",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "W",
+      "SpellName": "carpetbombmega",
+      "Invert": false
+    }
+  ],
+  "Diana": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "R",
+      "SpellName": "dianateleport",
+      "Invert": false
+    }
+  ],
+  "Ekko": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "E",
+      "SpellName": "ekkoeattack",
+      "Invert": false
+    }
+  ],
+  "Elise": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "E",
+      "SpellName": "elisespideredescent",
+      "Invert": false
+    }
+  ],
+  "Fiora": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "Q",
+      "SpellName": "fioraq",
+      "Invert": false
+    }
+  ],
+  "Fizz": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "Q",
+      "SpellName": "fizzq",
+      "Invert": false
+    }
+  ],
+  "Galio": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "galioe",
+      "Invert": false
+    }
+  ],
+  "Gnar": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "gnare",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "gnarbige",
+      "Invert": false
+    }
+  ],
+  "Gragas": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "gragase",
+      "Invert": false
+    }
+  ],
+  "Graves": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "gravesmove",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "graveschargeshot",
+      "Invert": true
+    }
+  ],
+  "Hecarim": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "E",
+      "SpellName": "hecarimrampattack",
+      "Invert": false
+    }
+  ],
+  "Illaoi": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "W",
+      "SpellName": "illaoiwattack",
+      "Invert": false
+    }
+  ],
+  "Irelia": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "Q",
+      "SpellName": "ireliaq",
+      "Invert": false
+    }
+  ],
+  "JarvanIV": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "R",
+      "SpellName": "jarvanivcataclysm",
+      "Invert": false
+    }
+  ],
+  "Jax": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "Q",
+      "SpellName": "jaxleapstrike",
+      "Invert": false
+    }
+  ],
+  "Jayce": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "Q",
+      "SpellName": "jaycetotheskies",
+      "Invert": false
+    }
+  ],
+  "Kaisa": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "kaisar",
+      "Invert": false
+    }
+  ],
+  "Kassadin": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "riftwalk",
+      "Invert": false
+    }
+  ],
+  "Katarina": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "E",
+      "SpellName": "katarinae",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "katarinaedagger",
+      "Invert": false
+    }
+  ],
+  "Kayn": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "Q",
+      "SpellName": "kaynq",
+      "Invert": false
+    }
+  ],
+  "Khazix": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "khazixe",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "khazixelong",
+      "Invert": false
+    }
+  ],
+  "Kindred": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "Q",
+      "SpellName": "kindredq",
+      "Invert": false
+    }
+  ],
+  "Kled": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "Q",
+      "SpellName": "kledriderq",
+      "Invert": true
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "klede",
+      "Invert": false
+    }
+  ],
+  "Leblanc": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "W",
+      "SpellName": "leblancw",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "leblancrw",
+      "Invert": false
+    }
+  ],
+  "LeeSin": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "Q",
+      "SpellName": "blindmonkqtwo",
+      "Invert": false
+    }
+  ],
+  "Lucian": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "luciane",
+      "Invert": false
+    }
+  ],
+  "Malphite": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "ufslash",
+      "Invert": false
+    }
+  ],
+  "Maokai": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "W",
+      "SpellName": "maokaiw",
+      "Invert": false
+    }
+  ],
+  "MasterYi": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "Q",
+      "SpellName": "alphastrike",
+      "Invert": false
+    }
+  ],
+  "MonkeyKing": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "E",
+      "SpellName": "monkeykingnimbus",
+      "Invert": false
+    }
+  ],
+  "Nidalee": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "W",
+      "SpellName": "pounce",
+      "Invert": false
+    }
+  ],
+  "Ornn": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "ornne",
+      "Invert": false
+    }
+  ],
+  "Pantheon": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "W",
+      "SpellName": "pantheonw",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "pantheonrfall",
+      "Invert": false
+    }
+  ],
+  "Poppy": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "E",
+      "SpellName": "poppye",
+      "Invert": false
+    }
+  ],
+  "Pyke": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "pykee",
+      "Invert": false
+    }
+  ],
+  "Rakan": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "W",
+      "SpellName": "rakanw",
+      "Invert": false
+    }
+  ],
+  "Renekton": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "renektonsliceanddice",
+      "Invert": false
+    }
+  ],
+  "Riven": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "rivenfeint",
+      "Invert": false
+    }
+  ],
+  "Sejuani": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "Q",
+      "SpellName": "sejuaniq",
+      "Invert": false
+    }
+  ],
+  "Shen": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "shene",
+      "Invert": false
+    }
+  ],
+  "Shyvana": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "R",
+      "SpellName": "shyvanatransformcast",
+      "Invert": false
+    }
+  ],
+  "Talon": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "Q",
+      "SpellName": "talonq",
+      "Invert": false
+    }
+  ],
+  "Tristana": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "W",
+      "SpellName": "tristanaw",
+      "Invert": false
+    }
+  ],
+  "Tryndamere": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "tryndameree",
+      "Invert": false
+    }
+  ],
+  "Urgot": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "urgote",
+      "Invert": false
+    }
+  ],
+  "Vayne": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "Q",
+      "SpellName": "vaynetumble",
+      "Invert": false
+    }
+  ],
+  "Vi": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "Q",
+      "SpellName": "viq",
+      "Invert": false
+    }
+  ],
+  "XinZhao": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "E",
+      "SpellName": "xinzhaoe",
+      "Invert": false
+    }
+  ],
+  "Yasuo": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "E",
+      "SpellName": "yasuodashwrapper",
+      "Invert": false
+    }
+  ],
+  "Zac": [
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "zace",
+      "Invert": false
+    }
+  ]
+}

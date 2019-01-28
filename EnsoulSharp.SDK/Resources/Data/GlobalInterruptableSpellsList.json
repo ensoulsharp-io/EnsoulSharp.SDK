@@ -1,0 +1,8 @@
+[
+  {
+    "DangerLevel": "Medium",
+    "MovementInterrupts": true,
+    "Name": "summonerteleport",
+    "Slot": "Unknown"
+  }
+]
