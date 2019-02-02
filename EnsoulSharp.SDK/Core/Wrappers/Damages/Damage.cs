@@ -333,6 +333,11 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                     dmgBase +=
                         spellData.BonusDamageOnMonster[Math.Min(spellLevel - 1, spellData.BonusDamageOnMonster.Count - 1)];
                 }
+                if (targetMinion != null && target.Team != GameObjectTeam.Neutral && target.Team != source.Team && spellData.BonusDamageOnSoldier?.Count > 0)
+                {
+                    dmgBase +=
+                        spellData.BonusDamageOnSoldier[Math.Min(spellLevel - 1, spellData.BonusDamageOnSoldier.Count - 1)];
+                }
             }
 
             if (dmgBase > 0)
@@ -799,7 +804,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                     if (source.HasBuff("shyvanapassive")
                         && new[] { "SRU_Dragon_Air", "SRU_Dragon_Earth", "SRU_Dragon_Fire", "SRU_Dragon_Water", "SRU_Dragon_Elder", "TT_Spiderboss" }.Any(i => i.Equals(target.CharacterName)))
                     {
-                        amount *= 1.1;
+                        amount *= 1.2;
                     }
                 }
 

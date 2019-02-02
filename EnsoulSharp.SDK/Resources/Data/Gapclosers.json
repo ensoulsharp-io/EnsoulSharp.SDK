@@ -435,6 +435,20 @@
       "Invert": false
     }
   ],
+  "Sylas": [
+    {
+      "SkillType": "Targeted",
+      "Slot": "W",
+      "SpellName": "SylasW",
+      "Invert": false
+    },
+    {
+      "SkillType": "Skillshot",
+      "Slot": "E",
+      "SpellName": "SylasE",
+      "Invert": false
+    }
+  ],
   "Talon": [
     {
       "SkillType": "Targeted",

@@ -1073,6 +1073,15 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                             (hero, @base) => ((AIHeroClient)hero.GetBuff("").Caster).GetSpellDamage(@base, SpellSlot.Q, DamageStage.Detonation),
                             true);
                         break;
+                    case "Sylas":
+                        AddPassiveAttack(
+                            "Sylas",
+                            (hero, @base) => hero.HasBuff("SylasPassiveAttack"),
+                            DamageType.Magical,
+                            (hero, @base) => 5 + (48 - 5) / 17 * Math.Max(0, hero.Level - 1) + 1 * hero.TotalAttackDamage + 0.2 * hero.TotalMagicalDamage,
+                            false,
+                            true);
+                        break;
                     case "TahmKench":
                         AddPassiveAttack(
                             "TahmKench",

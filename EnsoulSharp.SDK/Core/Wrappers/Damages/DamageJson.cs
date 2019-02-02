@@ -451,6 +451,8 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
 
             public List<double> BonusDamageOnMonster { get; set; }
 
+            public List<double> BonusDamageOnSoldier { get; set; }
+
             /// <summary>
             ///     Gets the Bonus Damages.
             /// </summary>
