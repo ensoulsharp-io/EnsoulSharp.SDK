@@ -19,7 +19,6 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
 {
     using System;
     using System.Linq;
-    using System.Text.RegularExpressions;
 
     using Utils;
 
@@ -813,16 +812,6 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                 {
                     amount *= 0.6;
                 }
-
-                if (targetHero != null)
-                {
-                    // Phantom Dancer
-                    var phantomdancerBuff = source.GetBuff("itemphantomdancerdebuff");
-                    if (phantomdancerBuff != null && phantomdancerBuff.Caster.Compare(targetHero))
-                    {
-                        amount *= 0.88;
-                    }
-                }
             }
 
             // Vladimir R.P
@@ -910,9 +899,9 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                                 - 0.04 * targetHero.TotalMagicalDamage / 100;
                 }
                 // Irelia W
-                if (targetHero.HasBuff("ireliawdefense"))
+                if (targetHero.HasBuff("ireliawdefense") && damageType == DamageType.Physical)
                 {
-                    amount *= 1 - 0.4
+                    amount *= 1 - 0.5
                                 - 0.07 * targetHero.TotalMagicalDamage / 100;
                 }
                 // Kassadin P

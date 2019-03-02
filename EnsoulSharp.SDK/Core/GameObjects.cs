@@ -163,8 +163,8 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     The general particle emitters list.
         /// </summary>
-        private static readonly List<Obj_GeneralParticleEmitter> ParticleEmittersList =
-            new List<Obj_GeneralParticleEmitter>();
+        private static readonly List<EffectEmitter> ParticleEmittersList =
+            new List<EffectEmitter>();
 
         /// <summary>
         ///     The shops list.
@@ -350,7 +350,7 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     Gets the general particle emitters.
         /// </summary>
-        public static IEnumerable<Obj_GeneralParticleEmitter> ParticleEmitters => ParticleEmittersList;
+        public static IEnumerable<EffectEmitter> ParticleEmitters => ParticleEmittersList;
 
         /// <summary>
         ///     Gets or sets the player.
@@ -458,7 +458,7 @@ namespace EnsoulSharp.SDK
                     GameObjectsList.AddRange(ObjectManager.Get<GameObject>());
                     NexusList.AddRange(ObjectManager.Get<HQClient>());
                     AttackableUnitsList.AddRange(ObjectManager.Get<AttackableUnit>());
-                    ParticleEmittersList.AddRange(ObjectManager.Get<Obj_GeneralParticleEmitter>());
+                    ParticleEmittersList.AddRange(ObjectManager.Get<EffectEmitter>());
 
                     EnemyHeroesList.AddRange(HeroesList.Where(o => o.IsEnemy));
                     EnemyMinionsList.AddRange(MinionsList.Where(o => o.IsEnemy));
@@ -584,7 +584,7 @@ namespace EnsoulSharp.SDK
                 return;
             }
 
-            var particle = sender as Obj_GeneralParticleEmitter;
+            var particle = sender as EffectEmitter;
             if (particle != null)
             {
                 ParticleEmittersList.Add(particle);
@@ -778,7 +778,7 @@ namespace EnsoulSharp.SDK
                 return;
             }
 
-            var particle = sender as Obj_GeneralParticleEmitter;
+            var particle = sender as EffectEmitter;
             if (particle != null)
             {
                 ParticleEmittersList.Remove(particle);

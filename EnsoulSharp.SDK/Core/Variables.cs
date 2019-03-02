@@ -31,7 +31,7 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     The game version.
         /// </summary>
-        public static readonly Version GameVersion = new Version("9.2");
+        public static readonly Version GameVersion = new Version("9.4");
 
         /// <summary>
         ///     The kit version.

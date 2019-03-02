@@ -95,20 +95,23 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                 DamageType.Magical,
                 (hero, @base) =>
                 {
+                    var stormrazor = Items.HasItem((int)ItemId.Stormrazor);
+                    var d0 = stormrazor ? 65 : 0;
                     var d1 = Items.HasItem((int)ItemId.Kircheis_Shard, hero) ? 50 : 0;
                     var d2 = Items.HasItem((int)ItemId.Statikk_Shiv, hero)
                                  ? new[] {
                                              60, 60, 60, 60, 60, 67, 73, 79, 85, 91, 97, 104, 110, 116, 122, 128, 134, 140
                                          }[Math.Min(17, Math.Max(0, hero.Level - 1))]
-                                   * hero.GetCritMultiplier(true)
+                                   * hero.GetCritMultiplier(true) * (stormrazor ? 1.3 : 1)
                                  : 0;
                     var d3 = Items.HasItem((int)ItemId.Rapid_Firecannon, hero)
                                  ? new[]
                                          {
                                              60, 60, 60, 60, 60, 67, 73, 79, 85, 91, 97, 104, 110, 116, 122, 128, 134, 140
                                          }[Math.Min(17, Math.Max(0, hero.Level - 1))]
+                                   * (stormrazor ? 1.3 : 1)
                                  : 0;
-                    return Math.Max(d1, Math.Max(d2, d3));
+                    return Math.Max(d0, Math.Max(d1, Math.Max(d2, d3)));
                 });
             AddPassiveAttack(
                 string.Empty,
@@ -518,9 +521,9 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                     case "Irelia":
                         AddPassiveAttack(
                             "Irelia",
-                            (hero, @base) => hero.HasBuff("ireliapassivestacks"),
+                            (hero, @base) => hero.GetBuffCount("ireliapassivestacks") == 5,
                             DamageType.Magical,
-                            (hero, @base) => hero.GetBuffCount("ireliapassivestacks") * (4 + 13 / 17 * Math.Max(0, hero.Level - 1) + 0.04 * hero.FlatPhysicalDamageMod));
+                            (hero, @base) => 15 + (66 - 15) / 17 * Math.Max(0, hero.Level - 1) + 0.25 * hero.FlatPhysicalDamageMod);
                         break;
                     case "Ivern":
                         AddPassiveAttack(
@@ -1330,9 +1333,8 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
 
         private static float GetCritMultiplier(this AIHeroClient hero, bool checkCrit = false)
         {
-            var windblade = hero.HasBuff("windbladebuff");
-            var crit = windblade ? Math.Min(1, 0.4f + 2 * hero.Crit) : 1;
-            return !checkCrit ? crit : (windblade || (Math.Abs(hero.Crit - 1) < float.Epsilon) ? 1 + crit : 1);
+            var crit = Items.HasItem((int)ItemId.Infinity_Edge, hero) || Items.HasItem((int)ItemId.Molten_Edge, hero) ? 1.25f : 1;
+            return !checkCrit ? crit : (Math.Abs(hero.Crit - 1) < float.Epsilon ? 1 + crit : 1);
         }
 
         /// <summary>

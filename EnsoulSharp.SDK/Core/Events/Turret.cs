@@ -55,7 +55,7 @@ namespace EnsoulSharp.SDK
         /// </param>
         private static void EventTurret(GameObject sender)
         {
-            if (sender is Obj_GeneralParticleEmitter && sender.Name.Contains("Turret"))
+            if (sender is EffectEmitter && sender.Name.Contains("Turret"))
             {
                 var turret =
                     Turrets.Values.Where(t => t.Turret.IsValid())
