@@ -53,6 +53,7 @@
     <Compile Include="Core\Enumerations\JungleType.cs" />
     <Compile Include="Core\Enumerations\KeyBindType.cs" />
     <Compile Include="Core\Enumerations\LogLevel.cs" />
+    <Compile Include="Core\Enumerations\MenuValueType.cs" />
     <Compile Include="Core\Enumerations\MinionTypes.cs" />
     <Compile Include="Core\Enumerations\NotificationIconType.cs" />
     <Compile Include="Core\Enumerations\OrbwalkingMode.cs" />
@@ -212,6 +213,7 @@
     <Compile Include="Core\UI\Notifications\Notification.cs" />
     <Compile Include="Core\UI\Notifications\NotificationIcons.cs" />
     <Compile Include="Core\UI\Notifications\Notifications.cs" />
+    <Compile Include="Core\UI\PermaShow.cs" />
     <Compile Include="Core\UI\Utils.cs" />
     <Compile Include="Core\Utils\ActionQueue.cs" />
     <Compile Include="Core\Utils\AutoAttack.cs" />
@@ -225,6 +227,7 @@
     <Compile Include="Core\Utils\Invulnerable.cs" />
     <Compile Include="Core\Utils\JsonFactory.cs" />
     <Compile Include="Core\Utils\Jungle.cs" />
+    <Compile Include="Core\Utils\KeyConvert.cs" />
     <Compile Include="Core\Utils\Logging.cs" />
     <Compile Include="Core\Utils\MathUtils.cs" />
     <Compile Include="Core\Utils\Minion.cs" />
@@ -354,7 +357,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Data\9.2.260.6714.json" />
+    <EmbeddedResource Include="Resources\Data\9.4.264.1140.json" />
     <EmbeddedResource Include="Resources\Data\Database.json" />
     <EmbeddedResource Include="Resources\Data\Gapclosers.json" />
     <EmbeddedResource Include="Resources\Data\GlobalInterruptableSpellsList.json" />

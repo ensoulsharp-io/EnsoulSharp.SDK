@@ -72,15 +72,15 @@ namespace EnsoulSharp.SDK
                     ensoulSharpFont =
                     new Font(
                         Drawing.Direct3DDevice,
-                        14,
+                        16,
                         0,
                         FontWeight.DoNotCare,
                         0,
                         false,
                         FontCharacterSet.Default,
-                        FontPrecision.Default,
-                        FontQuality.Antialiased,
-                        FontPitchAndFamily.DontCare | FontPitchAndFamily.Decorative,
+                        FontPrecision.TrueType,
+                        FontQuality.ClearTypeNatural,
+                        FontPitchAndFamily.DontCare | FontPitchAndFamily.Decorative | FontPitchAndFamily.Modern,
                         "Calibri");
             }
         }

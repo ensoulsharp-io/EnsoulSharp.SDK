@@ -21,11 +21,7 @@ namespace EnsoulSharp.SDK
     using System.Security.Permissions;
     using System.Threading;
 
-    using System.Collections.Generic;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Linq;
-    using System.Text;
-
+    using EnsoulSharp.SDK.Core.UI;
     using EnsoulSharp.SDK.Core.UI.IMenu;
     using EnsoulSharp.SDK.Core.UI.IMenu.Customizer;
     using EnsoulSharp.SDK.Core.Utils;
@@ -80,12 +76,12 @@ namespace EnsoulSharp.SDK
             GameObjects.Initialize();
             Logging.Write()(LogLevel.Info, "[SDK Bootstrap] GameObjects Initialized.");
 
-            // Create E# menu
+            // Create E# menu.
             Variables.EnsoulSharpMenu = new Menu("EnsoulSharp", "EnsoulSharp", true).Attach();
             MenuCustomizer.Initialize(Variables.EnsoulSharpMenu);
             Logging.Write()(LogLevel.Info, "[SDK Bootstrap] EnsoulSharp Menu Created.");
 
-            // Load the Orbwalker
+            // Load the Orbwalker.
             Variables.Orbwalker = new Orbwalker(Variables.EnsoulSharpMenu);
             Logging.Write()(LogLevel.Info, "[SDK Bootstrap] Orbwalker Initialized.");
 
@@ -93,9 +89,13 @@ namespace EnsoulSharp.SDK
             Variables.TargetSelector = new TargetSelector(Variables.EnsoulSharpMenu);
             Logging.Write()(LogLevel.Info, "[SDK Bootstrap] TargetSelector Initialized.");
 
-            // Load the Notifications
+            // Load the Notifications.
             Notifications.Initialize(Variables.EnsoulSharpMenu);
             Logging.Write()(LogLevel.Info, "[SDK Bootstrap] Notifications Initialized.");
+
+            // Load the Permashow.
+            PermaShow.Initialize(Variables.EnsoulSharpMenu);
+            Logging.Write()(LogLevel.Info, "[SDK Bootstrap] Permashow Initialized.");
 
             // Load Damages.
             Damage.Initialize(Variables.GameVersion);
