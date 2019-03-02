@@ -107,7 +107,7 @@ namespace EnsoulSharp.SDK
             foreach (var vector in array)
             {
                 var temporaryDistance = vector2.Distance(vector);
-                if (distance < temporaryDistance)
+                if (temporaryDistance < distance)
                 {
                     distance = temporaryDistance;
                     result = vector;
@@ -131,7 +131,7 @@ namespace EnsoulSharp.SDK
             foreach (var vector in array)
             {
                 var temporaryDistance = vector2.Distance(vector);
-                if (distance < temporaryDistance)
+                if (temporaryDistance < distance)
                 {
                     distance = temporaryDistance;
                     result = vector;
