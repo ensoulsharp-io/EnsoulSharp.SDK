@@ -1646,8 +1646,10 @@
             {
               "DamageType": "Magical",
               "DamagePercentages": [ 0.15, 0.175, 0.2, 0.225, 0.25 ],
-              "MinDamage": [ 80, 130, 180, 230, 280 ],
               "MaxDamageOnMinion": [ 300, 350, 400, 450, 500 ],
+              "MinDamage": {
+                "Damages": [ 80, 130, 180, 230, 280 ]
+              },
               "ScalingTarget": "Target",
               "ScalingType": "CurrentHealth"
             }
@@ -1735,7 +1737,9 @@
               "DamageType": "Magical",
               "DamagePercentages": [ 0.03, 0.03, 0.03, 0.03, 0.03 ],
               "MaxDamageOnMinion": [ 150, 150, 150, 150, 150 ],
-              "MinDamage": [ 15, 15, 15, 15, 15 ],
+              "MinDamage": {
+                "Damages": [ 15, 15, 15, 15, 15 ]
+              },
               "ScalePer100Ap": 0.03,
               "ScalingTarget": "Target",
               "ScalingType": "MissingHealth"
@@ -1922,7 +1926,9 @@
             {
               "DamageType": "Magical",
               "DamagePercentages": [ 0.03, 0.03, 0.03, 0.03, 0.03 ],
-              "MinDamage": [ 25, 25, 25, 25, 25 ],
+              "MinDamage": {
+                "Damages": [ 25, 25, 25, 25, 25 ]
+              },
               "ScalePer100Ap": 0.015,
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
@@ -1941,7 +1947,9 @@
             {
               "DamageType": "Magical",
               "DamagePercentages": [ 0.04, 0.04, 0.04, 0.04, 0.04 ],
-              "MinDamage": [ 25, 25, 25, 25, 25 ],
+              "MinDamage": {
+                "Damages": [ 25, 25, 25, 25, 25 ]
+              },
               "ScalePer100Ap": 0.025,
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
@@ -6799,7 +6807,9 @@
             {
               "DamageType": "Magical",
               "DamagePercentages": [ 0.12, 0.13, 0.14, 0.15, 0.16 ],
-              "MinDamage": [ 80, 130, 180, 230, 280 ],
+              "MinDamage": {
+                "Damages": [ 80, 130, 180, 230, 280 ]
+              },
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
             }
@@ -10075,7 +10085,9 @@
               "DamageType": "True",
               "DamagePercentages": [ 0.04, 0.065, 0.09, 0.115, 0.14 ],
               "MaxDamageOnMonster": [ 200, 200, 200, 200, 200 ],
-              "MinDamage": [ 50, 65, 80, 95, 110 ],
+              "MinDamage": {
+                "Damages": [ 50, 65, 80, 95, 110 ]
+              },
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
             }
