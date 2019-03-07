@@ -47,8 +47,8 @@ namespace EnsoulSharp.SDK
             /// <summary>
             ///     Stored Path list
             /// </summary>
-            private static readonly Dictionary<int, List<StoredPath>> StoredPaths =
-                new Dictionary<int, List<StoredPath>>();
+            private static readonly Dictionary<uint, List<StoredPath>> StoredPaths =
+                new Dictionary<uint, List<StoredPath>>();
 
             #endregion
 

@@ -31,7 +31,7 @@ namespace EnsoulSharp.SDK.Modes.Weights
     {
         #region Fields
 
-        private readonly Dictionary<int, bool> infinity = new Dictionary<int, bool>();
+        private readonly Dictionary<uint, bool> infinity = new Dictionary<uint, bool>();
 
         /// <summary>
         ///     The average armor

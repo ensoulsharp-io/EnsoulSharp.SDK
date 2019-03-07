@@ -28,7 +28,7 @@ namespace EnsoulSharp.SDK.Modes.Weights
     {
         #region Static Fields
 
-        private static readonly Dictionary<int, AggroEntry> PEntries = new Dictionary<int, AggroEntry>();
+        private static readonly Dictionary<uint, AggroEntry> PEntries = new Dictionary<uint, AggroEntry>();
 
         #endregion
 
@@ -49,7 +49,7 @@ namespace EnsoulSharp.SDK.Modes.Weights
         /// <summary>
         ///     Gets the entries
         /// </summary>
-        public static ReadOnlyDictionary<int, AggroEntry> Entries => new ReadOnlyDictionary<int, AggroEntry>(PEntries);
+        public static ReadOnlyDictionary<uint, AggroEntry> Entries => new ReadOnlyDictionary<uint, AggroEntry>(PEntries);
 
         #endregion
 

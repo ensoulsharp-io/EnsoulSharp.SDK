@@ -29,8 +29,8 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     Casted Spells of the champions
         /// </summary>
-        internal static readonly Dictionary<int, LastCastedSpellEntry> CastedSpells =
-            new Dictionary<int, LastCastedSpellEntry>();
+        internal static readonly Dictionary<uint, LastCastedSpellEntry> CastedSpells =
+            new Dictionary<uint, LastCastedSpellEntry>();
 
         #endregion
 

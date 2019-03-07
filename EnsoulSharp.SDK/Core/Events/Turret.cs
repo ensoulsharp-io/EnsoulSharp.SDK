@@ -32,7 +32,7 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     The Turrets list.
         /// </summary>
-        private static readonly IDictionary<int, TurretArgs> Turrets = new Dictionary<int, TurretArgs>();
+        private static readonly IDictionary<uint, TurretArgs> Turrets = new Dictionary<uint, TurretArgs>();
 
         #endregion
 

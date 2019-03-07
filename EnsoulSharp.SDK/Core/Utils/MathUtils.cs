@@ -184,12 +184,12 @@ namespace EnsoulSharp.SDK.Core.Utils
             /// <summary>
             ///     Stored Paths.
             /// </summary>
-            public static readonly Dictionary<int, List<Vector2>> StoredPaths = new Dictionary<int, List<Vector2>>();
+            public static readonly Dictionary<uint, List<Vector2>> StoredPaths = new Dictionary<uint, List<Vector2>>();
 
             /// <summary>
             ///     Stored Ticks.
             /// </summary>
-            public static readonly Dictionary<int, int> StoredTick = new Dictionary<int, int>();
+            public static readonly Dictionary<uint, int> StoredTick = new Dictionary<uint, int>();
 
             #endregion
         }

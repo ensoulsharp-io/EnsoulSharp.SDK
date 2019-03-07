@@ -43,7 +43,7 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     Gets the casting interruptible spell dictionary.
         /// </summary>
-        public static IReadOnlyDictionary<int, InterruptableSpellData> CastingInterruptableSpell
+        public static IReadOnlyDictionary<uint, InterruptableSpellData> CastingInterruptableSpell
             => CastingInterruptableSpellDictionary;
 
         /// <summary>
@@ -64,8 +64,8 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     Gets or sets the casting interrupt-able spell.
         /// </summary>
-        private static Dictionary<int, InterruptableSpellData> CastingInterruptableSpellDictionary { get; set; } =
-            new Dictionary<int, InterruptableSpellData>();
+        private static Dictionary<uint, InterruptableSpellData> CastingInterruptableSpellDictionary { get; set; } =
+            new Dictionary<uint, InterruptableSpellData>();
 
         /// <summary>
         ///     Gets or sets the interrupt-able spells.

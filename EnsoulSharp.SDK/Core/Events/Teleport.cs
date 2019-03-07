@@ -41,8 +41,8 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     The teleport data by network id dictionary.
         /// </summary>
-        private static readonly IDictionary<int, TeleportEventArgs> TeleportDataByNetworkId =
-            new Dictionary<int, TeleportEventArgs>();
+        private static readonly IDictionary<uint, TeleportEventArgs> TeleportDataByNetworkId =
+            new Dictionary<uint, TeleportEventArgs>();
 
         /// <summary>
         ///     The type by string dictionary.

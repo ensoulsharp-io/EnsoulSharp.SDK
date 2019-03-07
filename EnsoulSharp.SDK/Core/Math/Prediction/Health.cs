@@ -34,7 +34,7 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     List of Active Attacks.
         /// </summary>
-        private static readonly Dictionary<int, PredictedDamage> ActiveAttacks = new Dictionary<int, PredictedDamage>();
+        private static readonly Dictionary<uint, PredictedDamage> ActiveAttacks = new Dictionary<uint, PredictedDamage>();
 
         /// <summary>
         ///     Last Tick Update

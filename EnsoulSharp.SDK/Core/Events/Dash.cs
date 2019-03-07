@@ -34,7 +34,7 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     DetectedDashes list.
         /// </summary>
-        private static readonly Dictionary<int, DashArgs> DetectedDashes = new Dictionary<int, DashArgs>();
+        private static readonly Dictionary<uint, DashArgs> DetectedDashes = new Dictionary<uint, DashArgs>();
 
         #endregion
 

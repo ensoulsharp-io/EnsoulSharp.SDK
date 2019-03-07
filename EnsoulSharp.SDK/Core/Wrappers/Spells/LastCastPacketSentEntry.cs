@@ -36,7 +36,7 @@ namespace EnsoulSharp.SDK
         /// <param name="targetNetworkId">
         ///     The target network id
         /// </param>
-        public LastCastPacketSentEntry(SpellSlot slot, int tick, int targetNetworkId)
+        public LastCastPacketSentEntry(SpellSlot slot, int tick, uint targetNetworkId)
         {
             this.Slot = slot;
             this.Tick = tick;
@@ -55,7 +55,7 @@ namespace EnsoulSharp.SDK
         /// <summary>
         ///     Gets the target network id.
         /// </summary>
-        public int TargetNetworkId { get; private set; }
+        public uint TargetNetworkId { get; private set; }
 
         /// <summary>
         ///     Gets the tick.
