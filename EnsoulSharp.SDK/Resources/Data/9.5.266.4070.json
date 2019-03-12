@@ -4262,6 +4262,30 @@
           ]
         }
       }
+    ],
+    "R": [
+      {
+        "Stage": "Default",
+        "SpellData": {
+          "SpellEffectType": "AoE",
+          "DamageType": "Magical",
+          "Damages": [ 200, 350, 500 ],
+          "BonusDamages": [
+            {
+              "DamageType": "Magical",
+              "DamagePercentages": [ 1, 1, 1 ],
+              "ScalingTarget": "Source",
+              "ScalingType": "BonusAttackPoints"
+            },
+            {
+              "DamageType": "Magical",
+              "DamagePercentages": [ 0.8, 0.8, 0.8 ],
+              "ScalingTarget": "Source",
+              "ScalingType": "AbilityPoints"
+            }
+          ]
+        }
+      }
     ]
   },
   "Kayn": {
