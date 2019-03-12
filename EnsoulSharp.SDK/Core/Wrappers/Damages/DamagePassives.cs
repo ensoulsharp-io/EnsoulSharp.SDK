@@ -64,7 +64,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
             AddPassiveAttack(
                 string.Empty,
                 (hero, @base) =>
-                !new[] { "Ashe", "Corki", "Fiora", "Galio", "Graves", "Jayce", "Jhin", "Kled", "Pantheon", "Shaco", "Urgot", "Yasuo", "Zac" }.Contains(
+                !new[] { "Ashe", "Corki", "Fiora", "Galio", "Graves", "Jayce", "Jhin", "Kayle", "Kled", "Pantheon", "Shaco", "Urgot", "Yasuo", "Zac" }.Contains(
                     hero.CharacterName) && Math.Abs(hero.Crit - 1) < float.Epsilon,
                 DamageType.Physical,
                 (hero, @base) =>
@@ -669,9 +669,20 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                     case "Kayle":
                         AddPassiveAttack(
                             "Kayle",
+                            (hero, @base) => !hero.HasBuff("KayleE") && Math.Abs(hero.Crit - 1) < float.Epsilon,
+                            DamageType.Physical,
+                            (hero, @base) => hero.TotalAttackDamage * hero.GetCritMultiplier());
+                        AddPassiveAttack(
+                            "Kayle",
                             (hero, @base) => hero.Spellbook.GetSpell(SpellSlot.E).Level > 0,
                             DamageType.Magical,
-                            (hero, @base) => hero.GetSpellDamage(@base, SpellSlot.E, hero.HasBuff("JudicatorRighteousFury") ? DamageStage.Empowered : DamageStage.Default),
+                            (hero, @base) => hero.GetSpellDamage(@base, SpellSlot.E, DamageStage.Default),
+                            true);
+                        AddPassiveAttack(
+                            "Kayle",
+                            (hero, @base) => hero.HasBuff("KayleE"),
+                            DamageType.Magical,
+                            (hero, @base) => hero.GetSpellDamage(@base, SpellSlot.E, DamageStage.Empowered),
                             true);
                         break;
                     case "Kennen":
@@ -1220,7 +1231,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                             "Vi",
                             (hero, @base) => hero.HasBuff("ViE"),
                             DamageType.Physical,
-                            (hero, @base) => hero.GetSpellDamage(@base, SpellSlot.E),
+                            (hero, @base) => hero.GetCritMultiplier(true) * hero.GetSpellDamage(@base, SpellSlot.E),
                             true);
                         break;
                     case "Viktor":

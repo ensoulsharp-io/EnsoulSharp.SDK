@@ -63,9 +63,9 @@ namespace EnsoulSharp.SDK.Properties {
         /// <summary>
         ///   查找 System.Byte[] 类型的本地化资源。
         /// </summary>
-        internal static byte[] _9_4_264_1140 {
+        internal static byte[] _9_5_266_4070 {
             get {
-                object obj = ResourceManager.GetObject("_9_4_264_1140", resourceCulture);
+                object obj = ResourceManager.GetObject("_9_5_266_4070", resourceCulture);
                 return ((byte[])(obj));
             }
         }

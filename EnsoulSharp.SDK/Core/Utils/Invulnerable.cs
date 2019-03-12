@@ -58,7 +58,7 @@ namespace EnsoulSharp.SDK.Core.Utils
                             { ChampionName = "Fiora" },
                         new InvulnerableEntry("JaxCounterStrike")
                             { ChampionName = "Jax", DamageType = DamageType.Physical },
-                        new InvulnerableEntry("JudicatorIntervention")
+                        new InvulnerableEntry("KayleR")
                             { IsShield = true },
                         new InvulnerableEntry("KindredRNoDeathBuff")
                             { MinHealthPercent = 10, CheckFunction = (target, type) => target.HealthPercent <= 10 },
@@ -66,7 +66,7 @@ namespace EnsoulSharp.SDK.Core.Utils
                             { ChampionName = "Malzahar", IsShield = true, DamageType = DamageType.Magical },
                         new InvulnerableEntry("Meditate")
                             { ChampionName = "MasterYi", CheckFunction = (target, type) => GameObjects.Player.CountEnemyHeroesInRange(GameObjects.Player.GetRealAutoAttackRange()) > 1 },
-                        new InvulnerableEntry("BlackShield")
+                        new InvulnerableEntry("MorganaE")
                             { IsShield = true, DamageType = DamageType.Magical },
                         new InvulnerableEntry("NocturneShroudofDarkness")
                             { ChampionName = "Nocturne" },

@@ -36,12 +36,12 @@ namespace EnsoulSharp.SDK.Core.Utils
                 "dariusnoxiantacticsonh","masochism","ekkoe","fiorae",
                 "fizzw","garenq","gravesmove","hecarimramp",
                 "illaoiw","jaxempowertwo","jaycehypercharge","netherblade",
-                "kindredq","leonashieldofdaybreak","luciane","meditate",
-                "monkeykingdoubleattack","mordekaisermaceofspades","nasusq","nautiluspiercinggaze",
-                "takedown","reksaiq","renektonpreexecute","rengarq",
-                "riventricleave","shyvanadoubleattack","shyvanadoubleattackdragon","sivirw",
-                "talonqattack","trundletrollsmash","vaynetumble","vie",
-                "volibearq","xinzhaoq","yorickq",
+                "kaylee","kindredq","leonashieldofdaybreak","luciane",
+                "meditate","monkeykingdoubleattack","mordekaisermaceofspades","nasusq",
+                "nautiluspiercinggaze","takedown","reksaiq","renektonpreexecute",
+                "rengarq","riventricleave","shyvanadoubleattack","shyvanadoubleattackdragon",
+                "sivirw","talonqattack","trundletrollsmash","vaynetumble",
+                "vie","volibearq","xinzhaoq","yorickq",
                 "itemtitanichydracleave"
             };
 

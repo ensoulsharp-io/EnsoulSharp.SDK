@@ -166,7 +166,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                     return dmgPassive;
                 }
 
-                var crit = Math.Abs(hero.Crit - 1) < float.Epsilon || hero.HasBuff("windbladebuff");
+                var crit = Math.Abs(hero.Crit - 1) < float.Epsilon;
                 var critMultiplier = 1d;
                 switch (hero.CharacterName)
                 {
