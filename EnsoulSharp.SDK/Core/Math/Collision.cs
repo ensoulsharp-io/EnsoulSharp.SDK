@@ -29,33 +29,6 @@ namespace EnsoulSharp.SDK
     /// </summary>
     public static class Collision
     {
-        #region Static Fields
-
-        /// <summary>
-        ///     Wall Cast Tick (for <c>Yasuo</c>)
-        /// </summary>
-        private static int wallCastT;
-
-        /// <summary>
-        ///     <c>Yasuo</c>'s wall position in Vector2 format.
-        /// </summary>
-        private static Vector2 yasuoWallCastedPos;
-
-        #endregion
-
-        #region Constructors and Destructors
-
-        /// <summary>
-        ///     Initializes static members of the <see cref="Collision" /> class.
-        ///     Static Constructor
-        /// </summary>
-        static Collision()
-        {
-            AIBaseClient.OnDoCast += AIHeroClient_OnDoCast;
-        }
-
-        #endregion
-
         #region Public Methods and Operators
 
         /// <summary>
@@ -133,65 +106,42 @@ namespace EnsoulSharp.SDK
 
                 if (input.CollisionObjects.HasFlag(CollisionableObjects.YasuoWall))
                 {
-                    if (Variables.TickCount - wallCastT > 4000)
-                    {
-                        continue;
-                    }
-
-                    GameObject wall = null;
-                    foreach (var gameObject in
-                        GameObjects.AllGameObjects.Where(
-                            gameObject =>
-                            gameObject.IsValid
-                            && Regex.IsMatch(gameObject.Name, "_w_windwall_enemy_0.\\.troy", RegexOptions.IgnoreCase)))
-                    {
-                        wall = gameObject;
-                    }
-
-                    if (wall == null)
+                    if (!GameObjects.EnemyHeroes
+                        .Any(
+                            hero => hero.IsValidTarget(float.MaxValue, false) && hero.CharacterName == "Yasuo"))
                     {
                         break;
                     }
 
-                    var level = wall.Name.Substring(wall.Name.Length - 6, 1);
-                    var wallWidth = 300 + (50 * Convert.ToInt32(level));
-
-                    var wallDirection = (wall.Position.ToVector2() - yasuoWallCastedPos).Normalized().Perpendicular();
-                    var wallStart = wall.Position.ToVector2() + (wallWidth / 2f * wallDirection);
-                    var wallEnd = wallStart - (wallWidth * wallDirection);
-
-                    if (wallStart.Intersection(wallEnd, position.ToVector2(), input.From.ToVector2()).Intersects)
+                    foreach (var effectEmitter in GameObjects.ParticleEmitters)
                     {
-                        var t = Variables.TickCount
-                                + (((wallStart.Intersection(wallEnd, position.ToVector2(), input.From.ToVector2())
-                                         .Point.Distance(input.From) / input.Speed) + input.Delay) * 1000);
-                        if (t < wallCastT + 4000)
+                        if (effectEmitter.IsValid &&
+                            Regex.IsMatch(effectEmitter.Name, @"Yasuo_.+_w_windwall_enemy_\d", RegexOptions.IgnoreCase))
                         {
-                            result.Add(GameObjects.Player);
+                            var wall = effectEmitter;
+                            var level = wall.Name.Substring(wall.Name.Length - 2, 2);
+                            var wallWidth = 250 + 50 * Convert.ToInt32(level);
+                            var wallDirection = wall.Perpendicular.ToVector2();
+                            var wallStart = wall.Position.ToVector2() + wallWidth / 2 * wallDirection;
+                            var wallEnd = wallStart - wallWidth * wallDirection;
+
+                            if (wallStart.Intersection(wallEnd, position.ToVector2(), input.From.ToVector2()).Intersects)
+                            {
+                                var t = Variables.TickCount
+                                        + (((wallStart.Intersection(wallEnd, position.ToVector2(), input.From.ToVector2())
+                                                 .Point.Distance(input.From) / input.Speed) + input.Delay) * 1000);
+                                if (t < wall.RestartTime + 4000)
+                                {
+                                    result.Add(GameObjects.Player);
+                                    break;
+                                }
+                            }
                         }
                     }
                 }
             }
 
             return result.Distinct().ToList();
-        }
-
-        #endregion
-
-        #region Methods
-
-        /// <summary>
-        ///     Processed Casted Spell subscribed event function
-        /// </summary>
-        /// <param name="sender"><see cref="AIBaseClient" /> sender.</param>
-        /// <param name="args">Processed Spell Cast Data</param>
-        private static void AIHeroClient_OnDoCast(AIBaseClient sender, AIBaseClientProcessSpellCastEventArgs args)
-        {
-            if (sender.IsValid && sender.Team != GameObjects.Player.Team && args.SData.Name == "YasuoWMovingWall")
-            {
-                wallCastT = Variables.TickCount;
-                yasuoWallCastedPos = sender.Position.ToVector2();
-            }
         }
 
         #endregion
