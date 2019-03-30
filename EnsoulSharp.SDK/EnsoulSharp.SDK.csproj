@@ -357,7 +357,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Data\9.5.266.4070.json" />
+    <EmbeddedResource Include="Resources\Data\9.6.267.4221.json" />
     <EmbeddedResource Include="Resources\Data\Database.json" />
     <EmbeddedResource Include="Resources\Data\Gapclosers.json" />
     <EmbeddedResource Include="Resources\Data\GlobalInterruptableSpellsList.json" />

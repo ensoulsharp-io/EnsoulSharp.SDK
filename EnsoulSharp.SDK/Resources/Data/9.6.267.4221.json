@@ -966,7 +966,7 @@
         "SpellData": {
           "SpellEffectType": "Single",
           "DamageType": "Physical",
-          "Damages": [ 250, 475, 700 ],
+          "Damages": [ 300, 525, 750 ],
           "BonusDamages": [
             {
               "DamageType": "Physical",
@@ -4896,7 +4896,7 @@
           "BonusDamages": [
             {
               "DamageType": "Magical",
-              "DamagePercentages": [ 0.4, 0.4, 0.4, 0.4, 0.4 ],
+              "DamagePercentages": [ 0.3, 0.3, 0.3, 0.3, 0.3 ],
               "ScalingTarget": "Source",
               "ScalingType": "AbilityPoints"
             }
@@ -7446,7 +7446,7 @@
           "BonusDamages": [
             {
               "DamageType": "Physical",
-              "DamagePercentages": [ 2, 2, 2 ],
+              "DamagePercentages": [ 1.75, 1.75, 1.75 ],
               "ScalingTarget": "Source",
               "ScalingType": "BonusAttackPoints"
             },
@@ -8170,7 +8170,7 @@
         "SpellData": {
           "SpellEffectType": "None",
           "DamageType": "Magical",
-          "DamagesPerLvl": [ 5, 5, 5, 10, 10, 10, 15, 15, 15, 20, 20, 20, 25, 25, 25, 30, 30, 30 ],
+          "DamagesPerLvl": [ 10, 10, 10, 16, 16, 16, 22, 22, 22, 28, 28, 28, 34, 34, 34, 40, 40, 40 ],
           "BonusDamages": [
             {
               "DamageType": "Magical",
@@ -8187,7 +8187,7 @@
         "SpellData": {
           "SpellEffectType": "None",
           "DamageType": "Magical",
-          "DamagesPerLvl": [ 5, 5, 5, 10, 10, 10, 15, 15, 15, 20, 20, 20, 25, 25, 25, 30, 30, 30 ],
+          "DamagesPerLvl": [ 10, 10, 10, 16, 16, 16, 22, 22, 22, 28, 28, 28, 34, 34, 34, 40, 40, 40 ],
           "BonusDamages": [
             {
               "DamageType": "Magical",
@@ -8204,12 +8204,12 @@
         "SpellData": {
           "SpellEffectType": "None",
           "DamageType": "Magical",
-          "DamagesPerLvl": [ 10, 10, 10, 20, 20, 20, 30, 30, 30, 40, 40, 40, 50, 50, 50, 60, 60, 60 ],
-          "MaxDamageOnMonster": [ 75, 100, 125, 150, 175 ],
+          "DamagesPerLvl": [ 20, 20, 20, 32, 32, 32, 44, 44, 44, 56, 56, 56, 68, 68, 68, 80, 80, 80 ],
           "BonusDamages": [
             {
               "DamageType": "Magical",
               "DamagePercentages": [ 0.04, 0.05, 0.06, 0.07, 0.08 ],
+              "MaxDamageOnMonster": [ 75, 100, 125, 150, 175 ],
               "ScalePer100Ap": 0.03,
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
@@ -8222,12 +8222,12 @@
         "SpellData": {
           "SpellEffectType": "None",
           "DamageType": "Magical",
-          "DamagesPerLvl": [ 10, 10, 10, 20, 20, 20, 30, 30, 30, 40, 40, 40, 50, 50, 50, 60, 60, 60 ],
-          "MaxDamageOnMonster": [ 75, 100, 125, 150, 175 ],
+          "DamagesPerLvl": [ 20, 20, 20, 32, 32, 32, 44, 44, 44, 56, 56, 56, 68, 68, 68, 80, 80, 80 ],
           "BonusDamages": [
             {
               "DamageType": "Magical",
               "DamagePercentages": [ 0.08, 0.09, 0.1, 0.11, 0.12 ],
+              "MaxDamageOnMonster": [ 75, 100, 125, 150, 175 ],
               "ScalePer100Ap": 0.04,
               "ScalingTarget": "Target",
               "ScalingType": "MaxHealth"
@@ -9973,13 +9973,13 @@
         "SpellData": {
           "SpellEffectType": "AoE",
           "DamageType": "Physical",
-          "Damages": [ 60, 100, 140, 180, 220 ],
+          "Damages": [ 90, 120, 150, 180, 210 ],
           "BonusDamages": [
             {
               "DamageType": "Physical",
-              "DamagePercentages": [ 0.5, 0.5, 0.5, 0.5, 0.5 ],
+              "DamagePercentages": [ 1, 1, 1, 1, 1 ],
               "ScalingTarget": "Source",
-              "ScalingType": "AttackPoints"
+              "ScalingType": "BonusAttackPoints"
             }
           ]
         }
@@ -9991,13 +9991,13 @@
         "SpellData": {
           "SpellEffectType": "Single",
           "DamageType": "Physical",
-          "Damages": [ 50, 175, 300 ],
+          "Damages": [ 125, 250, 375 ],
           "BonusDamages": [
             {
               "DamageType": "Physical",
               "DamagePercentages": [ 0.5, 0.5, 0.5 ],
               "ScalingTarget": "Source",
-              "ScalingType": "AttackPoints"
+              "ScalingType": "BonusAttackPoints"
             }
           ]
         }

@@ -192,7 +192,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                         {
                             dmgPhysicalAddition = hero.GetSpellDamage(target, SpellSlot.W);
                             dmgPhysical = 0;
-                            dmgPassive /= 3;
+                            dmgPassive /= 2;
                         }
                         break;
                     case "Yasuo":
