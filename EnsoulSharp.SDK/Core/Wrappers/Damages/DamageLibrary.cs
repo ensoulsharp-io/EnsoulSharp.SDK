@@ -40,7 +40,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
         ///     The damage version files.
         /// </summary>
         private static readonly IDictionary<string, byte[]> DamageFiles = new Dictionary<string, byte[]>
-                                                                              { { "9.5", Resources._9_5_266_4070 } };
+                                                                              { { "9.6", Resources._9_6_267_4221 } };
 
         #endregion
 
@@ -384,7 +384,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
 
             if (dmg > 0)
             {
-                if (spellBonus.MinDamage.Damages?.Count > 0)
+                if (spellBonus.MinDamage?.Damages?.Count > 0)
                 {
                     dmg = Math.Max(dmg, source.ResolveLimitDamage(target, spellBonus.MinDamage, index));
                 }
