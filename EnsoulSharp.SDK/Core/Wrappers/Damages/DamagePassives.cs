@@ -142,7 +142,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                 string.Empty,
                 (hero, @base) => hero.HasBuff("itemangelhandbuff"),
                 DamageType.Magical,
-                (hero, @base) => 5 + 15 / 17 * (hero.Level - 1));
+                (hero, @base) => 5 + 15d / 17 * (hero.Level - 1));
             AddPassiveAttack(
                 string.Empty,
                 (hero, @base) => hero.HasBuff("Muramana") && hero.ManaPercent > 20,
@@ -152,7 +152,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                 string.Empty,
                 (hero, @base) => Items.HasItem((int)ItemId.Wits_End, hero),
                 DamageType.Magical,
-                (hero, @base) => 42);
+                (hero, @base) => 15 + 65d / 17 * (hero.Level - 1));
             AddPassiveAttack(
                 string.Empty,
                 (hero, @base) => Items.HasItem((int)ItemId.Trackers_Knife_Enchantment_Bloodrazor) || Items.HasItem((int)ItemId.Stalkers_Blade_Enchantment_Bloodrazor),
@@ -167,7 +167,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                 string.Empty,
                 (hero, @base) => hero.HasBuff("itemdusknightstalkerdamageproc"),
                 DamageType.Physical,
-                (hero, @base) => 30 + 120 / 17 * (hero.Level - 1));
+                (hero, @base) => 30 + 120d / 17 * (hero.Level - 1));
             AddPassiveAttack(
                 string.Empty,
                 (hero, @base) => hero.HasBuff("dreadnoughtmomentumbuff"),
@@ -523,7 +523,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                             "Irelia",
                             (hero, @base) => hero.GetBuffCount("ireliapassivestacks") == 5,
                             DamageType.Magical,
-                            (hero, @base) => 15 + (66 - 15) / 17 * Math.Max(0, hero.Level - 1) + 0.25 * hero.FlatPhysicalDamageMod);
+                            (hero, @base) => 15 + (double)(66 - 15) / 17 * Math.Max(0, hero.Level - 1) + 0.25 * hero.FlatPhysicalDamageMod);
                         break;
                     case "Ivern":
                         AddPassiveAttack(
@@ -910,7 +910,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                             "Poppy",
                             (hero, @base) => hero.HasBuff("poppypassivebuff"),
                             DamageType.Magical,
-                            (hero, @base) => 20 + (180 - 20) / 17 * Math.Max(0, hero.Level - 1));
+                            (hero, @base) => 20 + (double)(180 - 20) / 17 * Math.Max(0, hero.Level - 1));
                         break;
                     case "Quinn":
                         AddPassiveAttack(
@@ -1092,7 +1092,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
                             "Sylas",
                             (hero, @base) => hero.HasBuff("SylasPassiveAttack"),
                             DamageType.Magical,
-                            (hero, @base) => 5 + (48 - 5) / 17 * Math.Max(0, hero.Level - 1) + 1 * hero.TotalAttackDamage + 0.2 * hero.TotalMagicalDamage,
+                            (hero, @base) => 5 + (double)(48 - 5) / 17 * Math.Max(0, hero.Level - 1) + 1 * hero.TotalAttackDamage + 0.2 * hero.TotalMagicalDamage,
                             false,
                             true);
                         break;

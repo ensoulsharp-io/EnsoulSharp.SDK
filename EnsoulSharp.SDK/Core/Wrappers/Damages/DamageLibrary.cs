@@ -40,7 +40,7 @@ namespace EnsoulSharp.SDK.Core.Wrappers.Damages
         ///     The damage version files.
         /// </summary>
         private static readonly IDictionary<string, byte[]> DamageFiles = new Dictionary<string, byte[]>
-                                                                              { { "9.6", Resources._9_6_267_4221 } };
+                                                                              { { "9.7", Resources._9_7_269_2391 } };
 
         #endregion
 
