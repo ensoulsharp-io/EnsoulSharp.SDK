@@ -47,7 +47,7 @@ namespace EnsoulSharp.SDK.Modes
         /// <inheritdoc />
         public List<AIHeroClient> OrderChampions(List<AIHeroClient> heroes)
         {
-            return heroes.OrderBy(x => x.Distance(Game.CursorPosCenter)).ToList();
+            return heroes.OrderBy(x => x.Distance(Game.CursorPosRaw)).ToList();
         }
 
         #endregion

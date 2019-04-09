@@ -41,7 +41,7 @@ namespace EnsoulSharp.SDK.Modes.Weights
         #region Public Methods and Operators
 
         /// <inheritdoc />
-        public float GetValue(AIHeroClient hero) => hero.Distance(Game.CursorPosCenter);
+        public float GetValue(AIHeroClient hero) => hero.Distance(Game.CursorPosRaw);
 
         #endregion
     }

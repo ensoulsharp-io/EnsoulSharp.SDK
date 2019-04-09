@@ -317,6 +317,13 @@ namespace EnsoulSharp.SDK
                 return;
             }
 
+            if (position.Distance(GameObjects.Player.Position) < GameObjects.Player.BoundingRadius)
+            {
+                position = GameObjects.Player.Position.Extend(
+                    position,
+                    GameObjects.Player.BoundingRadius + this.random.Next(0, 51));
+            }
+
             if (position.Distance(GameObjects.Player.Position)
                 < GameObjects.Player.BoundingRadius
                 + this.Menu["advanced"]["movementExtraHold"].GetValue<MenuSlider>().Value)
@@ -324,10 +331,11 @@ namespace EnsoulSharp.SDK
                 if (GameObjects.Player.Path.Length > 0)
                 {
                     var eventStopArgs = new OrbwalkingActionArgs
-                                            {
-                                                Position = GameObjects.Player.Position, Process = true,
-                                                Type = OrbwalkingType.StopMovement
-                                            };
+                    {
+                        Position = GameObjects.Player.Position,
+                        Process = true,
+                        Type = OrbwalkingType.StopMovement
+                    };
                     this.InvokeAction(eventStopArgs);
                     if (eventStopArgs.Process)
                     {
@@ -335,15 +343,7 @@ namespace EnsoulSharp.SDK
                         this.LastMovementOrderTick = Variables.TickCount - 70;
                     }
                 }
-
                 return;
-            }
-
-            if (position.Distance(GameObjects.Player.Position) < GameObjects.Player.BoundingRadius)
-            {
-                position = GameObjects.Player.Position.Extend(
-                    position,
-                    GameObjects.Player.BoundingRadius + this.random.Next(0, 51));
             }
 
             var maximumDistance = this.Menu["advanced"]["movementMaximumDistance"].GetValue<MenuSlider>().Value;

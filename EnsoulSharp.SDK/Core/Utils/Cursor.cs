@@ -56,7 +56,7 @@ namespace EnsoulSharp.SDK.Core.Utils
         /// <summary>
         ///     Gets the current Cursor Game position as a Screen Vector2.
         /// </summary>
-        public static Vector2 GameScreenPosition => Drawing.WorldToScreen(Game.CursorPosCenter);
+        public static Vector2 GameScreenPosition => Drawing.WorldToScreen(Game.CursorPosRaw);
 
         /// <summary>
         ///     Returns if the cursor is over a HUD item.

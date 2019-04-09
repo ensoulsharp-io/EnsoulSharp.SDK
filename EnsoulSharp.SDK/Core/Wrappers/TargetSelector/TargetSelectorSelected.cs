@@ -149,8 +149,8 @@ namespace EnsoulSharp.SDK
 
             this.Target =
                 GameObjects.EnemyHeroes.Where(
-                    h => h.IsValidTarget() && h.Distance(Game.CursorPosCenter) < h.BoundingRadius + this.ClickBuffer)
-                    .OrderBy(h => h.Distance(Game.CursorPosCenter))
+                    h => h.IsValidTarget() && h.Distance(Game.CursorPosRaw) < h.BoundingRadius + this.ClickBuffer)
+                    .OrderBy(h => h.Distance(Game.CursorPosRaw))
                     .FirstOrDefault();
         }
 

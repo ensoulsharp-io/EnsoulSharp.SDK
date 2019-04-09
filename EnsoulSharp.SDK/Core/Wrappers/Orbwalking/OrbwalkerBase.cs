@@ -356,7 +356,7 @@ namespace EnsoulSharp.SDK
 
             if (this.CanMove() && this.MovementState)
             {
-                this.Move(position.HasValue && position.Value.IsValid() ? position.Value : Game.CursorPosCenter);
+                this.Move(position.HasValue && position.Value.IsValid() ? position.Value : Game.CursorPosRaw);
             }
         }
 

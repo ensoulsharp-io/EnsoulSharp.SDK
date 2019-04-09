@@ -370,7 +370,7 @@ namespace EnsoulSharp.SDK
         {
             if (value == null)
             {
-                v.Z = Game.CursorPosCenter.Z;
+                v.Z = Game.CursorPosRaw.Z;
             }
             else
             {
