@@ -224,10 +224,12 @@ namespace EnsoulSharp.SDK
             }
 
             var eventArgs = new OrbwalkingActionArgs
-                                {
-                                    Target = gTarget, Position = gTarget.Position, Process = true,
-                                    Type = OrbwalkingType.BeforeAttack
-                                };
+            {
+                Target = gTarget,
+                Position = gTarget.Position,
+                Process = true,
+                Type = OrbwalkingType.BeforeAttack
+            };
             this.InvokeAction(eventArgs);
 
             if (eventArgs.Process)
@@ -317,16 +319,8 @@ namespace EnsoulSharp.SDK
                 return;
             }
 
-            if (position.Distance(GameObjects.Player.Position) < GameObjects.Player.BoundingRadius)
-            {
-                position = GameObjects.Player.Position.Extend(
-                    position,
-                    GameObjects.Player.BoundingRadius + this.random.Next(0, 51));
-            }
-
             if (position.Distance(GameObjects.Player.Position)
-                < GameObjects.Player.BoundingRadius
-                + this.Menu["advanced"]["movementExtraHold"].GetValue<MenuSlider>().Value)
+                < this.Menu["advanced"]["movementExtraHold"].GetValue<MenuSlider>().Value)
             {
                 if (GameObjects.Player.Path.Length > 0)
                 {
@@ -344,6 +338,13 @@ namespace EnsoulSharp.SDK
                     }
                 }
                 return;
+            }
+
+            if (position.Distance(GameObjects.Player.Position) < GameObjects.Player.BoundingRadius + 100)
+            {
+                position = GameObjects.Player.Position.Extend(
+                    position,
+                    GameObjects.Player.BoundingRadius + (this.random.NextFloat(0.6f, 1) + 0.2f) * 400);
             }
 
             var maximumDistance = this.Menu["advanced"]["movementMaximumDistance"].GetValue<MenuSlider>().Value;
@@ -393,7 +394,7 @@ namespace EnsoulSharp.SDK
             }
 
             var eventArgs = new OrbwalkingActionArgs
-                                { Position = position, Process = true, Type = OrbwalkingType.Movement };
+            { Position = position, Process = true, Type = OrbwalkingType.Movement };
             this.InvokeAction(eventArgs);
 
             if (eventArgs.Process)
