@@ -80,6 +80,14 @@ namespace EnsoulSharp.SDK
         public OrbwalkerSelector(Orbwalker orbwalker)
         {
             this.orbwalker = orbwalker;
+
+            GameObject.OnDelete += (sender, args) =>
+            {
+                if (LaneClearMinion != null && sender.NetworkId == LaneClearMinion.NetworkId)
+                {
+                    LaneClearMinion = null;
+                }
+            };
         }
 
         #endregion
